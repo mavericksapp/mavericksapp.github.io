@@ -1,125 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mavericks App creates simple, useful mobile apps and games.">
-  <meta name="theme-color" content="#0f172a">
-  <meta property="og:title" content="Mavericks App">
-  <meta property="og:description" content="Simple, useful mobile apps and games.">
-  <meta property="og:type" content="website">
-  <title>Mavericks App</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maverik Apps - Mobile Apps</title>
+<meta name="description" content="Simple, useful and privacy-focused mobile apps for Android and iOS.">
+<meta name="keywords" content="mobile apps, Android apps, iOS apps, Flutter, Maverik Apps">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Maverik Apps - Mobile Apps">
+<meta property="og:description" content="Simple, useful and privacy-focused mobile apps for Android and iOS.">
+<meta property="og:url" content="https://maverickapps.github.io/">
+<meta property="og:image" content="https://maverickapps.github.io/assets/images/logo.png">
+<link rel="icon" href="assets/images/logo.png">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Mavericks App home">
-        <span class="brand-mark">M</span>
-        <span>Mavericks App</span>
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="privacy.html">Privacy</a>
-        <a href="contact.html">Contact</a>
-        <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle dark mode">☾</button>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero container">
-      <div class="hero-copy">
-        <p class="eyebrow">MOBILE APPS &amp; GAMES</p>
-        <h1>Simple apps.<br><span>Useful experiences.</span></h1>
-        <p class="hero-text">
-          Mavericks App creates practical mobile apps and games with a focus on
-          clean design, useful features, and a smooth user experience.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#apps">Explore apps</a>
-          <a class="button secondary" href="contact.html">Get in touch</a>
-        </div>
-      </div>
-
-      <div class="hero-card" aria-hidden="true">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="phone">
-          <div class="phone-top"></div>
-          <div class="phone-screen">
-            <div class="mini-logo">M</div>
-            <div class="mini-line wide"></div>
-            <div class="mini-line"></div>
-            <div class="mini-card"></div>
-            <div class="mini-card small"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="apps">
-      <div class="section-heading">
-        <p class="eyebrow">OUR APPS</p>
-        <h2>Apps made for everyday use</h2>
-        <p>More apps and games will be added here as they are released.</p>
-      </div>
-
-      <div class="empty-app">
-        <div class="empty-icon">+</div>
-        <h3>Coming soon</h3>
-        <p>
-          New mobile apps and games are currently in development.
-          Check back soon for updates.
-        </p>
-      </div>
-    </section>
-
-    <section class="section soft-section">
-      <div class="container feature-grid">
-        <article class="feature">
-          <div class="feature-icon">✦</div>
-          <h3>Simple</h3>
-          <p>Clear interfaces and focused features without unnecessary complexity.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-icon">◌</div>
-          <h3>Useful</h3>
-          <p>Apps are built around practical problems and everyday use cases.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-icon">↗</div>
-          <h3>Improving</h3>
-          <p>Apps are updated over time based on feedback and real-world use.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact-strip">
-      <div class="container contact-strip-inner">
-        <div>
-          <p class="eyebrow">WORK TOGETHER</p>
-          <h2>Have a question or feedback?</h2>
-        </div>
-        <a class="button primary" href="mailto:mobileapps.ajinkya@gmail.com">Email us</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Mavericks App</strong>
-        <p>Mobile apps and games.</p>
-      </div>
-      <div class="footer-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="contact.html">Contact</a>
-        <a href="mailto:mobileapps.ajinkya@gmail.com">Email</a>
-      </div>
-      <p class="copyright">© <span id="year"></span> Mavericks App. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+<body data-root="" data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+<section class="hero"><div class="wrap">
+<img src="assets/images/logo.png" alt="Maverik Apps logo" width="96" height="96">
+<h1>Maverik Apps</h1>
+<p class="lead" id="tagline">Simple, useful and privacy-focused mobile apps.</p>
+<a class="btn" href="#apps">Our Apps</a> <a class="btn btn-ghost" href="contact.html">Contact</a>
+</div></section>
+<section class="wrap" id="apps"><h2>Our Apps</h2><div class="grid" id="apps-grid"></div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/js/apps-data.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
