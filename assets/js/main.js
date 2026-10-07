@@ -44,6 +44,34 @@
     });
   }
 
+  // Subtle tilt/parallax for the dotted background (pointer on desktop, device tilt on phones)
+  const hero = document.querySelector(".hero");
+  if (hero && !reduce) {
+    const MAX = 14; // max shift in px
+    let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
+    const clamp = (v) => Math.max(-1, Math.min(1, v));
+    const tick = () => {
+      cx += (tx - cx) * 0.08;
+      cy += (ty - cy) * 0.08;
+      hero.style.setProperty("--tx", cx.toFixed(2) + "px");
+      hero.style.setProperty("--ty", cy.toFixed(2) + "px");
+      raf = (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) ? requestAnimationFrame(tick) : 0;
+    };
+    const aim = (nx, ny) => { tx = -nx * MAX; ty = -ny * MAX; if (!raf) raf = requestAnimationFrame(tick); };
+    window.addEventListener("pointermove", (e) => {
+      if (e.pointerType === "touch") return;
+      aim(clamp(e.clientX / window.innerWidth * 2 - 1), clamp(e.clientY / window.innerHeight * 2 - 1));
+    }, { passive: true });
+    document.addEventListener("pointerleave", () => aim(0, 0));
+    // Phones/tablets: Android and others deliver orientation freely; iOS needs a permission prompt, so it is skipped there
+    if ("DeviceOrientationEvent" in window && typeof DeviceOrientationEvent.requestPermission !== "function") {
+      window.addEventListener("deviceorientation", (e) => {
+        if (e.gamma == null || e.beta == null) return;
+        aim(clamp(e.gamma / 30), clamp((e.beta - 45) / 30));
+      }, { passive: true });
+    }
+  }
+
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();
