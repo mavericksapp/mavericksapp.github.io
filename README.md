@@ -1,31 +1,40 @@
-# Maverik Apps developer site
+# Mavericks App
 
-Free static site for GitHub Pages. Live at **https://maverickapps.github.io/**
+The official website of **Mavericks App**, a small studio that makes simple, useful mobile apps and games.
 
-## Setup
-1. On GitHub create a **public** repo named exactly `maverickapps.github.io` (must match your username).
-2. In this folder run:
+Live site: **https://mavericksapp.github.io/**
+
+## What's on the site
+
+- **Home**: introduction to Mavericks App and the "Explore apps" section with a card for each app.
+- **Privacy**: the site's own privacy notice, with links to each app's privacy policy.
+- **App privacy policies**: one page per app (Connect Dots, Dots and Boxes).
+- **Contact**: how to get in touch.
+- **404 page**: shown when a page is not found.
+
+## Features
+
+- Responsive layout for phones, tablets and desktops
+- Dark and light theme with a toggle (remembers your choice)
+- Animated logo and a softly moving dotted background
+- Respects the "reduce motion" setting
+- Basic SEO: page titles and descriptions, social preview image, `sitemap.xml` and `robots.txt`
+
+## Built with
+
+Plain HTML, CSS and JavaScript. There is no build step and no framework, and the site collects no data. It is hosted for free on GitHub Pages.
+
+## Folder overview
+
 ```
-git init
-git add .
-git commit -m "Initial site"
-git branch -M main
-git remote add origin https://github.com/maverickapps/maverickapps.github.io.git
-git push -u origin main
+index.html, privacy.html, contact.html, 404.html   Main pages
+privacy/                                           App privacy policies
+assets/css/                                        Styles
+assets/js/                                         Theme toggle and animations
+assets/images/                                     Logo, icons and app images
+sitemap.xml, robots.txt                            Search engine files
 ```
-3. Repo -> Settings -> Pages -> Source: "Deploy from a branch", Branch `main`, folder `/ (root)` -> Save.
-4. Wait 1-2 minutes, then open https://maverickapps.github.io/ and https://maverickapps.github.io/privacy/connect-dots.html (use a private window to confirm no login is needed).
 
-## Add a new app (e.g. `my-app`)
-1. Add an object to `assets/js/apps-data.js` (copy an existing one, set `id: "my-app"`).
-2. Put images in `assets/images/apps/my-app/` (`icon.png`, `screenshot-1..3.png`).
-3. Copy `apps/connect-dots.html` to `apps/my-app.html`; change `data-app`, `<title>`, description, and `og:` URL.
-4. Copy `privacy/_template.html` to `privacy/my-app.html`; replace the title/description/og:url and every `[BRACKETED]` item.
-5. Commit and push. Use `https://maverickapps.github.io/privacy/my-app.html` in both store consoles.
+## Contact
 
-## Update an app or policy
-Edit `assets/js/apps-data.js` (store links, text) or the app's `privacy/<id>.html`, update the "Last updated" date, commit and push.
-
-## Before submitting to stores
-- The example privacy pages still contain `[BRACKETED]` placeholders. Fill each with what the app actually does (data, ads, analytics, third parties, children) and make it match your Play Data Safety and App Store privacy answers.
-- This is a template, not legal advice.
+mobileapps.ajinkya@gmail.com
